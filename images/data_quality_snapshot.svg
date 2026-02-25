@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="5" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Main Card -->
+  <rect x="50" y="50" width="900" height="600" rx="20" fill="#ffffff" filter="url(#shadow)"/>
+  
+  <!-- Header -->
+  <path d="M50 70 A20 20 0 0 1 70 50 L930 50 A20 20 0 0 1 950 70 L950 140 L50 140 Z" fill="#1e293b" />
+  <text x="500" y="105" font-family="'Inter', 'Segoe UI', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">DATA QUALITY SNAPSHOT</text>
+
+  <!-- Section: Main Stats -->
+  <g transform="translate(100, 190)">
+    <rect x="0" y="0" width="240" height="110" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="120" y="40" font-family="'Inter', 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="middle" letter-spacing="1">ROWS</text>
+    <text x="120" y="85" font-family="'Inter', 'Segoe UI', sans-serif" font-size="36" font-weight="800" fill="#0f172a" text-anchor="middle">22,699</text>
+  </g>
+
+  <g transform="translate(380, 190)">
+    <rect x="0" y="0" width="240" height="110" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="120" y="40" font-family="'Inter', 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="middle" letter-spacing="1">COLUMNS</text>
+    <text x="120" y="85" font-family="'Inter', 'Segoe UI', sans-serif" font-size="36" font-weight="800" fill="#0f172a" text-anchor="middle">18</text>
+  </g>
+
+  <g transform="translate(660, 190)">
+    <rect x="0" y="0" width="240" height="110" rx="12" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="120" y="40" font-family="'Inter', 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#059669" text-anchor="middle" letter-spacing="1">MISSING VALUES</text>
+    <text x="120" y="85" font-family="'Inter', 'Segoe UI', sans-serif" font-size="36" font-weight="800" fill="#047857" text-anchor="middle">0</text>
+  </g>
+
+  <!-- Section: Issues Detected -->
+  <g transform="translate(100, 350)">
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#334155">Issues Detected</text>
+    <line x1="0" y1="15" x2="350" y2="15" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <g transform="translate(0, 40)">
+      <rect x="0" y="0" width="350" height="70" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <circle cx="20" cy="25" r="5" fill="#ef4444"/>
+      <text x="35" y="30" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#b91c1c">Mixed Datetime Format</text>
+      <text x="35" y="52" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" fill="#dc2626">Pickup &amp; Dropoff times inconsistent</text>
+    </g>
+
+    <g transform="translate(0, 125)">
+      <rect x="0" y="0" width="350" height="90" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <circle cx="20" cy="25" r="5" fill="#ef4444"/>
+      <text x="35" y="30" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#b91c1c">Invalid Values</text>
+      <text x="35" y="52" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" fill="#dc2626">• RatecodeID outside valid range (1-6)</text>
+      <text x="35" y="72" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" fill="#dc2626">• Negative amounts in financials</text>
+    </g>
+  </g>
+
+  <!-- Section: Cleaning Actions Applied -->
+  <g transform="translate(500, 350)">
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#334155">Cleaning Actions Applied</text>
+    <line x1="0" y1="15" x2="400" y2="15" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <g transform="translate(0, 40)">
+      <rect x="0" y="0" width="400" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <circle cx="25" cy="30" r="12" fill="#dcfce7"/>
+      <path d="M19 30 L23 34 L31 26" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="45" y="27" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#1e293b">Standardized Datetime</text>
+      <text x="45" y="47" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" fill="#64748b">Converted to YYYY-MM-DD HH:MM:SS format</text>
+    </g>
+
+    <g transform="translate(0, 115)">
+      <rect x="0" y="0" width="400" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <circle cx="25" cy="30" r="12" fill="#dcfce7"/>
+      <path d="M19 30 L23 34 L31 26" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="45" y="27" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#1e293b">Filtered Invalid Ratecodes</text>
+      <text x="45" y="47" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" fill="#64748b">Kept only records with RatecodeID between 1-6</text>
+    </g>
+
+    <g transform="translate(0, 190)">
+      <rect x="0" y="0" width="400" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <circle cx="25" cy="30" r="12" fill="#dcfce7"/>
+      <path d="M19 30 L23 34 L31 26" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="45" y="27" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#1e293b">Removed Negative Financials</text>
+      <text x="45" y="47" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" fill="#64748b">Ensured fare_amount, extra, &amp; taxes are >= 0</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <line x1="100" y1="590" x2="900" y2="590" stroke="#f1f5f9" stroke-width="2"/>
+  <text x="500" y="625" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">NYC TLC Dataset | Automatidata Project - Data Quality Assessment</text>
+</svg>
